@@ -1,0 +1,30 @@
+{
+  "name": "qa-automation-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portafolio QA: pruebas funcionales de SauceDemo con Playwright y TypeScript",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:chromium": "playwright test --project=chromium",
+    "test:known-defect": "playwright test --config=playwright.defect.config.ts",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:ui": "playwright test --ui",
+    "test:list": "playwright test --list",
+    "report": "playwright show-report",
+    "evidence": "node scripts/summarize.mjs",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/node": "24.19.2",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2"
+  }
+}

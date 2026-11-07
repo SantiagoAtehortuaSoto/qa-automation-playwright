@@ -1,0 +1,501 @@
+{
+  "generatedFrom": "Playwright JSON reporter; sin rutas locales ni registros brutos",
+  "startedAt": "2026-11-07T22:38:15.687Z",
+  "durationMs": 35726,
+  "platform": "win32",
+  "node": "v24.15.0",
+  "playwright": "1.65.0",
+  "counts": {
+    "total": 69,
+    "passed": 46,
+    "infrastructureErrors": 23,
+    "unexpected": 0,
+    "flaky": 0,
+    "skipped": 0
+  },
+  "cases": [
+    {
+      "id": "AUTH-01",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 618
+    },
+    {
+      "id": "AUTH-01",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "AUTH-01",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 612
+    },
+    {
+      "id": "AUTH-02",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 554
+    },
+    {
+      "id": "AUTH-02",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "AUTH-02",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 609
+    },
+    {
+      "id": "AUTH-03",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2963
+    },
+    {
+      "id": "AUTH-03",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "AUTH-03",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 516
+    },
+    {
+      "id": "AUTH-04",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2793
+    },
+    {
+      "id": "AUTH-04",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "AUTH-04",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 9973
+    },
+    {
+      "id": "AUTH-05",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 499
+    },
+    {
+      "id": "AUTH-05",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "AUTH-05",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 599
+    },
+    {
+      "id": "AUTH-06",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2609
+    },
+    {
+      "id": "AUTH-06",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "AUTH-06",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1572
+    },
+    {
+      "id": "CART-01",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 737
+    },
+    {
+      "id": "CART-01",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CART-01",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 860
+    },
+    {
+      "id": "CART-02",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 806
+    },
+    {
+      "id": "CART-02",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CART-02",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 857
+    },
+    {
+      "id": "CART-03",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 707
+    },
+    {
+      "id": "CART-03",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CART-03",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 797
+    },
+    {
+      "id": "CART-04",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1076
+    },
+    {
+      "id": "CART-04",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CART-04",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 756
+    },
+    {
+      "id": "CART-05",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 689
+    },
+    {
+      "id": "CART-05",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CART-05",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1161
+    },
+    {
+      "id": "CHK-01",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 828
+    },
+    {
+      "id": "CHK-01",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CHK-01",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 843
+    },
+    {
+      "id": "CHK-02",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 816
+    },
+    {
+      "id": "CHK-02",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CHK-02",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 839
+    },
+    {
+      "id": "CHK-03",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 810
+    },
+    {
+      "id": "CHK-03",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CHK-03",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 876
+    },
+    {
+      "id": "CHK-04",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 864
+    },
+    {
+      "id": "CHK-04",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CHK-04",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2251
+    },
+    {
+      "id": "CHK-05",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1328
+    },
+    {
+      "id": "CHK-05",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CHK-05",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 882
+    },
+    {
+      "id": "CHK-06",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1026
+    },
+    {
+      "id": "CHK-06",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "CHK-06",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1075
+    },
+    {
+      "id": "INV-01",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 630
+    },
+    {
+      "id": "INV-01",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "INV-01",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 3382
+    },
+    {
+      "id": "INV-02",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 604
+    },
+    {
+      "id": "INV-02",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "INV-02",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 612
+    },
+    {
+      "id": "INV-03",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 582
+    },
+    {
+      "id": "INV-03",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "INV-03",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 646
+    },
+    {
+      "id": "INV-04",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 576
+    },
+    {
+      "id": "INV-04",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "INV-04",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 608
+    },
+    {
+      "id": "INV-05",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5334
+    },
+    {
+      "id": "INV-05",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "INV-05",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 687
+    },
+    {
+      "id": "INV-06",
+      "project": "chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 572
+    },
+    {
+      "id": "INV-06",
+      "project": "firefox",
+      "result": "infrastructure-error",
+      "attempts": 1,
+      "durationMs": 1
+    },
+    {
+      "id": "INV-06",
+      "project": "mobile-chromium",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 683
+    }
+  ]
+}

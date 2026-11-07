@@ -1,0 +1,50 @@
+name: QA · Playwright
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regression:
+    name: Regresión · tres perfiles
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: npm
+      - name: Instalar dependencias fijadas
+        run: npm ci
+      - name: Comprobar TypeScript y formato
+        run: |
+          npm run typecheck
+          npm run format:check
+      - name: Instalar navegadores
+        run: npx playwright install --with-deps chromium firefox
+      - name: Ejecutar regresión
+        run: npm test
+      - name: Resumir resultados sin rutas privadas
+        if: ${{ !cancelled() }}
+        run: npm run evidence
+      - name: Conservar informe y evidencia durante 14 días
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report-${{ github.run_number }}
+          path: |
+            playwright-report/
+            test-results/
+            docs/evidence/latest-run.json
+          retention-days: 14
