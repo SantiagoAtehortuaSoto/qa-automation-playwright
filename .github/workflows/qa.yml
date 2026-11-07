@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   regression:
-    name: Regresión · tres perfiles
+    name: Regresión · escritorio y móvil
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -32,7 +32,7 @@ jobs:
           npm run typecheck
           npm run format:check
       - name: Instalar navegadores
-        run: npx playwright install --with-deps chromium firefox
+        run: npx playwright install --with-deps chromium
       - name: Ejecutar regresión
         run: npm test
       - name: Resumir resultados sin rutas privadas

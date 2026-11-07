@@ -1,7 +1,7 @@
 # Matriz de casos y trazabilidad
 
 Cada ID aparece también en el nombre de la prueba automatizada. Los 23 casos se
-repiten por perfil; no se contabilizan como 69 requisitos distintos.
+repiten por perfil; no se contabilizan como 46 requisitos distintos.
 
 | ID      | Prioridad    | Escenario / acción                    | Resultado esperado                                                            | Archivo           |
 | ------- | ------------ | ------------------------------------- | ----------------------------------------------------------------------------- | ----------------- |

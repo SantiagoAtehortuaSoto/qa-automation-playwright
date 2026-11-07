@@ -2,33 +2,50 @@
 
 Fecha de referencia: **7 de noviembre de 2026**.
 
-## Ejecución local en Windows
+## Regresión principal en Windows
 
-| Perfil                 | Casos | Resultado                                                   |
-| ---------------------- | ----: | ----------------------------------------------------------- |
-| Chromium escritorio    |    23 | 23 correctos                                                |
-| Chromium móvil emulado |    23 | 23 correctos                                                |
-| Firefox                |    23 | No evaluados funcionalmente: error al arrancar el navegador |
+| Perfil                 |  Casos | Resultado                                                 |
+| ---------------------- | -----: | --------------------------------------------------------- |
+| Chromium escritorio    |     23 | 23 correctos                                              |
+| Chromium móvil emulado |     23 | 23 correctos                                              |
+| **Total**              | **46** | **46 correctos, 0 fallidos, 0 omitidos, 0 intermitentes** |
 
-La ejecución local produjo 46 resultados correctos, 23 errores de infraestructura,
-cero omitidos y cero intermitentes. Firefox devolvió `browserType.launch: spawn UNKNOWN`
-antes de interactuar con la aplicación. No se presenta como un defecto de SauceDemo
-ni como 69 pruebas superadas.
+La ejecución final se realizó con `npm test`, sin reintentos locales, Node.js 24.15.0
+y Playwright 1.65.0. Duró aproximadamente 30 segundos. TypeScript, Prettier y la
+revisión de dependencias también terminaron correctamente; `npm audit` no informó
+vulnerabilidades conocidas en esa revisión.
 
 Resumen por caso y perfil: [`evidence/local-execution.json`](evidence/local-execution.json).
 El resumen excluye rutas privadas, cookies y registros brutos.
 
+![Informe real de las 46 ejecuciones de regresión](evidence/report.png)
+
+## Firefox: comprobación adicional
+
+La primera exploración incluyó Firefox y produjo 23 errores de infraestructura:
+`browserType.launch: spawn UNKNOWN`, antes de interactuar con la aplicación.
+No se presentan como defectos de SauceDemo ni como pruebas funcionales superadas.
+
+Se conserva la [evidencia de esa comprobación inicial](evidence/initial-browser-check.json).
+Firefox se ofrece en una configuración separada mediante `npm run test:firefox`;
+no forma parte del comando principal de regresión ni de su cifra de aprobados.
+
 ## GitHub Actions
 
-El flujo configura los tres perfiles sobre Linux e instala sus dependencias.
-El resultado se verifica después de publicar el repositorio y se enlaza aquí.
-Consultar el [historial de ejecuciones](https://github.com/SantiagoAtehortuaSoto/qa-automation-playwright/actions/workflows/qa.yml).
+El flujo está publicado y configura la regresión de escritorio y móvil en Linux.
+La [primera ejecución](https://github.com/SantiagoAtehortuaSoto/qa-automation-playwright/actions/runs/42421943988)
+fue bloqueada antes de iniciar por una restricción de cuenta; no recibió runner
+y no ejecutó ningún paso. Se diferencia este bloqueo de un fallo de pruebas.
+
+El flujo queda preparado para futuras ejecuciones, pero **no está validado en CI**.
+Consultar el [historial](https://github.com/SantiagoAtehortuaSoto/qa-automation-playwright/actions/workflows/qa.yml).
 
 ## Defecto reproducido
 
-La reproducción independiente BUG-001 se considera demostrada cuando falla la
-aserción de ordenación y sus adjuntos contienen los precios observados. No se suma
-a la cifra de pruebas de regresión. Ver [el informe](bug-report.md).
+BUG-001 se ejecutó por separado: un caso, un fallo por diferencia real de precios,
+sin `skip`, reintentos ni `test.fail()`. Se conservaron captura, traza, vídeo y los
+valores esperados y observados. No se suma a la regresión principal.
+Ver [el informe y la evidencia](bug-report.md).
 
 ## Límites
 

@@ -1,6 +1,6 @@
 # QA Automation · Playwright + TypeScript
 
-[![QA · Playwright](https://github.com/SantiagoAtehortuaSoto/qa-automation-playwright/actions/workflows/qa.yml/badge.svg)](https://github.com/SantiagoAtehortuaSoto/qa-automation-playwright/actions/workflows/qa.yml)
+[![Resultado local: 46 de 46](https://img.shields.io/badge/ejecuci%C3%B3n_local-46%2F46_correctas-23734d)](docs/results.md)
 
 **Un portafolio de pruebas funcionales, desde los riesgos hasta la evidencia.**
 
@@ -12,7 +12,8 @@ prueba pertenece a Sauce Labs.
 ## Qué puedes revisar
 
 - **23 casos independientes** de acceso, catálogo, carrito y compra ficticia.
-- Tres perfiles: Chromium de escritorio, Firefox y móvil emulado con Chromium.
+- Dos perfiles verificados: Chromium de escritorio y móvil emulado con Chromium.
+- Configuración adicional de Firefox, con su limitación de entorno documentada.
 - Código TypeScript con Page Objects, fixtures y datos de prueba separados.
 - Pruebas positivas, negativas, persistencia de carrito y consistencia de importes.
 - Una reproducción automatizada de un defecto observable, con informe separado.
@@ -23,6 +24,8 @@ prueba pertenece a Sauce Labs.
 **[Defecto documentado](docs/bug-report.md)** ·
 **[Resultados](docs/results.md)**
 
+![Informe real de la regresión: 46 ejecuciones correctas](docs/evidence/report.png)
+
 ## Qué valida
 
 | Área            | Casos | Riesgo principal                                                     |
@@ -32,7 +35,7 @@ prueba pertenece a Sauce Labs.
 | Carrito         |     5 | Pérdida, duplicación o eliminación incorrecta de productos           |
 | Compra ficticia |     6 | Formularios incompletos, importes incoherentes o carrito sin limpiar |
 
-Son **23 casos**, ejecutados en tres perfiles: **69 ejecuciones configuradas**.
+Son **23 casos**, ejecutados en dos perfiles: **46 ejecuciones de regresión**.
 Cuatro casos llevan la etiqueta `@smoke`, para comprobar rápidamente el recorrido
 principal. El estado ejecutado se consulta en [resultados](docs/results.md) y en
 el historial de Actions; una configuración de navegador no equivale a una prueba superada.
@@ -43,14 +46,14 @@ Requiere Node.js 24 e Internet. Desde la carpeta del proyecto:
 
 ```sh
 npm ci
-npx playwright install chromium firefox
+npx playwright install chromium
 npm test
 npm run report
 ```
 
 En Windows, si PowerShell restringe los lanzadores, utilizar `npm.cmd` y `npx.cmd`.
 En Linux pueden instalarse las dependencias del sistema con
-`npx playwright install --with-deps chromium firefox`.
+`npx playwright install --with-deps chromium`.
 
 Para una demostración breve:
 
@@ -66,7 +69,8 @@ Para comprobar el código y ejecutar un perfil concreto:
 npm run typecheck
 npm run format:check
 npm run test:chromium
-npm test -- --project=firefox
+npx playwright install firefox
+npm run test:firefox
 npm test -- --project=mobile-chromium
 ```
 
@@ -116,6 +120,10 @@ El resumen elimina rutas locales y registros brutos. El flujo de CI comprueba
 TypeScript y formato antes de probar, limita la duración, usa un trabajador y
 rechaza pruebas inestables aunque pasen en el reintento. Sus dependencias y las
 acciones están fijadas por versión o commit.
+
+El flujo está publicado, pero la primera ejecución no obtuvo un runner por una
+restricción de la cuenta. No se presenta como CI aprobado. El resultado verificado
+es el local; ver [estado y evidencia](docs/results.md).
 
 ## Alcance profesional
 
