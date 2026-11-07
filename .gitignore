@@ -17,3 +17,6 @@ blob-report/
 Thumbs.db
 work/
 .vscode/
+private/
+personal-notes/
+*.private.md
